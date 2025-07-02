@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📰 Fake News Detector</h1>
+        <p>Enter a news article below to check if it's real or fake.</p>
+
+        <form action="/check" method="POST">
+            <textarea name="news_text" placeholder="Paste your news article here..." required></textarea>
+            <button type="submit">Check News</button>
+        </form>
+
+        <h2>Trending News</h2>
+        <div class="news-container">
+            {% for article in articles %}
+                <div class="news-card">
+                    <h3>{{ article.title }}</h3>
+                    <p>{{ article.description }}</p>
+                    <a href="{{ article.url }}" target="_blank">Read More</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

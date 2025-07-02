@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>News Classification Result</h1>
+
+        <div class="news-box">
+            <h2>Submitted News</h2>
+            <p class="news-text">{{ text }}</p>
+        </div>
+
+        <div class="result-box {{ 'fake' if result == 'Fake News' else 'real' }}">
+            <h2>Prediction:</h2>
+            <p class="result-text">{{ result }}</p>
+        </div>
+
+        <div class="explanation-box">
+            <h2>Explanation of Prediction</h2>
+            <p>The following beeswarm plot shows the words that influenced the prediction: A SHAP beeswarm plot shows the impact of each feature on a model’s predictions. The x-axis represents SHAP values (how much a feature increases or decreases the prediction), while the y-axis lists features ranked by importance. Points are colored based on feature value (red for high, blue for low). If red points cluster to the right, high values increase the prediction, while blue points on the left mean low values decrease it.</p>
+            <img src="data:image/png;base64,{{ plot_url }}" alt="SHAP Beeswarm Plot">
+        </div>
+
+        <div class="summary-box">
+            <h2>Summary of Influential Words</h2>
+            <pre>{{ summary }}</pre>
+        </div>
+
+        <a href="/" class="back-button">Check Another News</a>
+    </div>
+</body>
+</html>

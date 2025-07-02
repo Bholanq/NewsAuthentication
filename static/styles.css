@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.news-box, .result-box, .explanation-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-text {
+    font-size: 1.1em;
+    color: #444;
+}
+
+.result-box {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.result-box.fake {
+    background-color: #ffdddd;
+    color: #d60000;
+}
+
+.result-box.real {
+    background-color: #ddffdd;
+    color: #008000;
+}
+.explanation {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.explanation-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #666;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.importance {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background: #0056b3;
+}
